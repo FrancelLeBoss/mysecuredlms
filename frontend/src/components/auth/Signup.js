@@ -56,7 +56,10 @@ const Signup = ({ toggleTheme, muiTheme }) => {
             <Grid container spacing={1} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 2 }}>
                 <Grid container spacing={1} style={{ display: 'flex', alignItems: "center", justifyContent: "space-between", flexDirection: "column", minHeight: "100vh", gap: '1rem' }}>
                     <Grid item alignItems='center'>
-                        <img src="../../../static/image/logo.png" alt="Logo" style={{ background: muiTheme?.palette?.mode === 'dark' ? "#fff" : "", padding: "1rem 0" }} />
+                        {
+                            muiTheme?.palette?.mode === 'dark' ? <img src="../../../static/image/logo-dark.png" alt="Logo" style={{ padding: "1rem 0" }} /> :
+                                <img src="../../../static/image/logo.png" alt="Logo" style={{ padding: "1rem 0" }} />
+                        }
                     </Grid>
                     <Grid container spacing={1} style={{ display: 'flex', flexDirection: 'column', gap: "1rem", padding: '1rem 0', alignItems: "center", justifyContent: "space-around", borderStyle: "solid", borderRadius: "1.5rem", maxWidth: '32rem', borderWidth: "1px" }}>
                         <Grid item xs={12} align='center' style={{ display: 'flex', flexDirection: 'row', gap: '0.4rem', alignItems: 'center', justifyContent: "center" }}>

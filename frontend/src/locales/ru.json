@@ -19,6 +19,7 @@
     "login_field_place_holder": "Имя пользователя или электронная почта",
     "password_field_place_holder": "Введите секретный пароль",
     "btn_login_page": "Вход",
+    "btn_reload_page": "Перезагрузка",
     "btn_signup_page": "Зарегистрироваться",
     "login_page_msg": "Продолжая, вы соглашаетесь ",
     "login_page_msg2": "условия использования",
@@ -30,5 +31,11 @@
     "login_page_create_account_btn": "Создать учетную запись",
     "signup_page_title": "Зарегистрироваться",
     "signup_page_msg_on_divider": "У вас есть аккаунт",
-    "signup_page_login_btn": "Войти"
+    "signup_page_login_btn": "Войти",
+    "sidebar_overview": "обзор",
+    "sidebar_courses": "Курсы",
+    "sidebar_assignments": "Задания",
+    "sidebar_settings": "Настройки",
+    "sidebar_profile": "Мой профайл",
+    "sidebar_logout": "Отключить"
 }

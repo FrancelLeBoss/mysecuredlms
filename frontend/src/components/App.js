@@ -9,9 +9,10 @@ import Login from './auth/Login';
 import Signup from './auth/Signup';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './tools/LanguageSelector';
+import Page from './page/Page';
 
 
-const App = () => {
+const App = ({ username, profile }) => {
     const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
     //const [themeMode, setThemeMode] = useState(prefersDarkMode ? 'dark' : 'light');
     const [themeMode, setThemeMode] = useState('light');
@@ -19,7 +20,6 @@ const App = () => {
     const toggleTheme = () => {
         setThemeMode(themeMode === 'light' ? 'dark' : 'light');
     };
-
     const muiTheme = createTheme({
         palette: {
             mode: themeMode,
@@ -28,13 +28,16 @@ const App = () => {
             },
             secondary: {
                 main: '#19857b',
+                var1: '#1aa397'
             },
             third: {
                 main: '#f9a682',
             },
             background: {
                 default: themeMode === 'light' ? '#fff' : '#1f1f1f',
+                sidebar: themeMode === 'light' ? '#F5F7F9' : '#181818',
             },
+
         },
     });
 
@@ -47,8 +50,9 @@ const App = () => {
             <div className=''>
                 <Router>
                     <Routes>
-                        <Route path='/' element={<Home muiTheme={muiTheme} toggleTheme={toggleTheme} />} />
-                        <Route path='/login' element={<Login muiTheme={muiTheme} toggleTheme={toggleTheme} />} />
+                        <Route path='/home' element={<Home muiTheme={muiTheme} data={username} profile={profile} toggleTheme={toggleTheme} />} />
+                        <Route path='/' element={<Page muiTheme={muiTheme} toggleTheme={toggleTheme} data={username} profile={profile} />} />
+                        <Route path='/login' element={<Login muiTheme={muiTheme} toggleTheme={toggleTheme} data={username} profile={profile} />} />
                         <Route path='/register' element={<Signup muiTheme={muiTheme} toggleTheme={toggleTheme} />} />
                     </Routes>
                 </Router>

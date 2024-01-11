@@ -20,7 +20,8 @@
     "login_field_place_holder": "Username or Email",
     "password_field_place_holder": "Enter your secured password",
     "repassword_field_place_holder": "Confirm password",
-    "btn_login_page": "Sign in",
+    "btn_login_page": "Login",
+    "btn_reload_page": "Reload",
     "btn_signup_page": "Sign up",
     "login_page_msg": "By continuing, you agree to ",
     "login_page_msg2": "the terms of use",
@@ -32,5 +33,11 @@
     "login_page_create_account_btn": "Create an account",
     "signup_page_title": "Sign up",
     "signup_page_msg_on_divider": "You have an account",
-    "signup_page_login_btn": "Sign in"
+    "signup_page_login_btn": "Sign in",
+    "sidebar_overview": "Overview",
+    "sidebar_courses": "Courses",
+    "sidebar_assignments": "Assignments",
+    "sidebar_settings": "Settings",
+    "sidebar_profile": "My Profile",
+    "sidebar_logout": "Disconnect"
 }

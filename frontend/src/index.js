@@ -9,10 +9,13 @@ import i18n from './utils/i18n.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
+const username = document.getElementById('main').getAttribute('data-username');
+const profile = document.getElementById('main').getAttribute('data-profile');
+
 root.render(
     <React.StrictMode>
         <I18nextProvider i18n={i18n}>
-            <App />
+            <App username={username} profile={profile} />
         </I18nextProvider>
     </React.StrictMode>
 );
